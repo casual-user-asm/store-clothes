@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from http import HTTPStatus
 from django.test import TestCase
 from django.urls import reverse
@@ -41,3 +42,8 @@ class ProductsListViewTestCase(TestCase):
         self.assertEqual(response.status_code, HTTPStatus.OK)
         self.assertEqual(response.context_data['title'], 'Store - Catalog')
         self.assertTemplateUsed(response, 'products/products.html')
+=======
+from django.test import TestCase
+
+# Create your tests here.
+>>>>>>> de9e5cf (First commit)

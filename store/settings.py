@@ -27,7 +27,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+<<<<<<< HEAD
 DOMAIN_NAME = 'http://127.0.0.1:8000'
+=======
+DOMAIN_NAME = 'http://localhost:8000'
+>>>>>>> de9e5cf (First commit)
 
 # Application definition
 
@@ -38,15 +42,21 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+<<<<<<< HEAD
     'django.contrib.humanize',
+=======
+>>>>>>> de9e5cf (First commit)
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.github',
     'products',
     'users',
+<<<<<<< HEAD
     'debug_toolbar',
     'orders',
+=======
+>>>>>>> de9e5cf (First commit)
 ]
 
 MIDDLEWARE = [
@@ -57,6 +67,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+<<<<<<< HEAD
     'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
@@ -77,6 +88,10 @@ CACHES = {
     }
 }
 
+=======
+]
+
+>>>>>>> de9e5cf (First commit)
 ROOT_URLCONF = 'store.urls'
 
 TEMPLATES = [
@@ -190,6 +205,7 @@ SOCIALACCOUNT_PROVIDERS = {
             'read:org',
         ],
     }
+<<<<<<< HEAD
 }
 
 # Stripe
@@ -197,3 +213,6 @@ SOCIALACCOUNT_PROVIDERS = {
 STRIPE_PUBLIC_KEY = 'pk_test_51NpC1iFe8qvv3OmnnPrQxWfynpTckGbCioAWD2rC2aJXoZAyJyiqxHjApxhfbrhvjWa1OGLjfnqueMgmrK5pFfOi005tpuQvei'
 STRIPE_SECRET_KEY = 'sk_test_51NpC1iFe8qvv3OmnBiNjEmHpzhcnvxLdlnMXDLMk5FpfizrDlgEk5bhPNDXfuGmnN6nVq3YtnmB5gXNnCGM0ZCef00Y5sIo2Tp'
 STRIPE_WEBHOOK_SECRET = 'whsec_71e6eee739576304be8e33e109ac5c97f8bfb6468beca68d62ef92c2d8e80bc1'
+=======
+}
+>>>>>>> de9e5cf (First commit)

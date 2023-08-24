@@ -1,4 +1,5 @@
 from django.test import TestCase
+<<<<<<< HEAD
 from django.urls import reverse
 from http import HTTPStatus
 
@@ -14,3 +15,7 @@ class UserRegistrationViewTestCase(TestCase):
         self.assertEqual(response.status_code, HTTPStatus.OK)
         self.assertEqual(response.context_data['title'], 'Registration')
         self.assertTemplateUsed(response, 'users/registration.html')
+=======
+
+# Create your tests here.
+>>>>>>> de9e5cf (First commit)

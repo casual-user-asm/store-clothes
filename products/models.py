@@ -1,9 +1,14 @@
 from django.db import models
+<<<<<<< HEAD
 import stripe
 from django.conf import settings
 from users.models import User
 
 stripe.api_key = settings.STRIPE_SECRET_KEY
+=======
+
+from users.models import User
+>>>>>>> de9e5cf (First commit)
 
 
 class ProductCategory(models.Model):
@@ -22,7 +27,10 @@ class Product(models.Model):
     name = models.CharField(max_length=256)
     descriprtion = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
+<<<<<<< HEAD
     stripe_product_price_id = models.CharField(max_length=128, null=True, blank=True)
+=======
+>>>>>>> de9e5cf (First commit)
     image = models.ImageField(upload_to='products_images')
     quantity = models.PositiveIntegerField(default=0)
     category = models.ForeignKey(to=ProductCategory, on_delete=models.CASCADE)
@@ -34,6 +42,7 @@ class Product(models.Model):
     def __str__(self) -> str:
         return f'Product: {self.name} | Category {self.category}'
 
+<<<<<<< HEAD
     def save(self, force_insert=False, force_update=False, using=None, update_fields=None):
         if not self.stripe_product_price_id:
             stripe_product_price = self.create_stripe_product_price()
@@ -47,10 +56,13 @@ class Product(models.Model):
         )
         return stripe_product_price
 
+=======
+>>>>>>> de9e5cf (First commit)
 
 class BasketQuerySet(models.QuerySet):
     def total_sum(self):
         return sum(basket.sum() for basket in self)
+<<<<<<< HEAD
 
     def total_quantity(self):
         return sum(basket.quantity for basket in self)
@@ -65,6 +77,12 @@ class BasketQuerySet(models.QuerySet):
             line_items.append(item)
         return line_items
 
+=======
+    
+    def total_quantity(self):
+        return sum(basket.quantity for basket in self)
+
+>>>>>>> de9e5cf (First commit)
 
 class Basket(models.Model):
     user = models.ForeignKey(to=User, on_delete=models.CASCADE)
@@ -76,6 +94,7 @@ class Basket(models.Model):
 
     def __str__(self) -> str:
         return f'{self.user.username} | {self.product.name}'
+<<<<<<< HEAD
 
     def sum(self):
         return self.quantity * self.product.price
@@ -88,3 +107,8 @@ class Basket(models.Model):
             'sum': float(self.sum()),
         }
         return basket_item
+=======
+    
+    def sum(self):
+        return self.quantity * self.product.price
+>>>>>>> de9e5cf (First commit)

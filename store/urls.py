@@ -19,7 +19,10 @@ from django.contrib import admin
 from django.urls import include, path
 
 from products.views import IndexView
+<<<<<<< HEAD
 from orders.views import my_webhook_view
+=======
+>>>>>>> de9e5cf (First commit)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,11 +30,17 @@ urlpatterns = [
     path('products/', include('products.urls', namespace='products')),
     path('users/', include('users.urls', namespace='users')),
     path('accounts/', include('allauth.urls')),
+<<<<<<< HEAD
     path('orders/', include('orders.urls', namespace='orders')),
     path('webhook/stripe/', my_webhook_view, name='stripe_webhook'),
+=======
+>>>>>>> de9e5cf (First commit)
 
 ]
 
 if settings.DEBUG:
+<<<<<<< HEAD
     urlpatterns.append(path("__debug__/", include("debug_toolbar.urls")))
+=======
+>>>>>>> de9e5cf (First commit)
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

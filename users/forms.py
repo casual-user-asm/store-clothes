@@ -1,10 +1,18 @@
 import uuid
 from datetime import timedelta
+<<<<<<< HEAD
 from django.utils.timezone import now
+=======
+>>>>>>> de9e5cf (First commit)
 
 from django import forms
 from django.contrib.auth.forms import (AuthenticationForm, UserChangeForm,
                                        UserCreationForm)
+<<<<<<< HEAD
+=======
+from django.utils.timezone import now
+
+>>>>>>> de9e5cf (First commit)
 from users.models import EmailVerification, User
 
 
@@ -40,7 +48,12 @@ class UserRegistrationForm(UserCreationForm):
     password2 = forms.CharField(widget=forms.PasswordInput(attrs={
         'class': 'form-control py-4', 'placeholder': 'Подтверждение пароля'
     }))
+<<<<<<< HEAD
 
+=======
+    
+    
+>>>>>>> de9e5cf (First commit)
     class Meta:
         model = User
         fields = ('first_name', 'last_name', 'username', 'email', 'password1', 'password2')
@@ -70,6 +83,10 @@ class UserProfileForm(UserChangeForm):
         'class': 'form-control py-4', 'readonly': True
     }))
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> de9e5cf (First commit)
     class Meta:
         model = User
         fields = ('first_name', 'last_name', 'image', 'username', 'email')
